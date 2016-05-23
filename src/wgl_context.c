@@ -204,11 +204,11 @@ static GLboolean choosePixelFormat(_GLFWwindow* window,
                 continue;
             }
 
-            if (!(pfd.dwFlags & PFD_GENERIC_ACCELERATED) &&
-                (pfd.dwFlags & PFD_GENERIC_FORMAT))
-            {
-                continue;
-            }
+            // if (!(pfd.dwFlags & PFD_GENERIC_ACCELERATED) &&
+            //     (pfd.dwFlags & PFD_GENERIC_FORMAT))
+            // {
+            //     continue;
+            // }
 
             if (pfd.iPixelType != PFD_TYPE_RGBA)
                 continue;
@@ -674,4 +674,3 @@ GLFWAPI HGLRC glfwGetWGLContext(GLFWwindow* handle)
     _GLFW_REQUIRE_INIT_OR_RETURN(NULL);
     return window->wgl.context;
 }
-
